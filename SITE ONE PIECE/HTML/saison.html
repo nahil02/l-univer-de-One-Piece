@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saison</title>
+    <link rel="stylesheet" href="saison.CSS" type="text/css">
+</head>
+<body bgcolor="black" dir="auto">
+<font color="black">
+<nav>
+    <table>
+        <tr>
+            <td><img src="OIP.JFIF" width="30%" height="70%" sizes="40%"></td>
+            <td><a href="accuail.html">Accuail</a></td>
+            <td><a href="saison.html">Saison</a></td>
+            <td><a href="film.html">Film</a></td>
+            <td><a href="l'histoire.html">L'histoire</a></td>
+            <td><a href="image.html">Image</a></td>
+        </tr>
+    </table>
+</nav>
+<img src="télécharger (1).jfif" width="300px" height="10%">
+<img src="télécharger.jfif" width="300px" height="10%">
+<img src="télécharger (1).jfif" width="300px" height="10%">
+<img src="télécharger.jfif" width="300px" height="10%">
+<img src="télécharger (1).jfif" width="300px" height="10%">
+<img src="télécharger.jfif" width="300px" height="10%">
+<h1><em>Bienvenue sur la page des saisons</em></h1>
+<p align="center">  Saison 9  </p>
+
+<B><h1><p align="left" color="green">* Les épisodes de la Saison 9</p></h1></B>
+<font color="white"><h2>tableux des Épisodes  </h2></font>
+<table>
+    <tr>            
+        <td><button class="episode-button"><h2>Épisode 770</h2><video src="770.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 771</h2><video src="771.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 772</h2><video src="772.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 773</h2><video src="773.mp4" controls width="300">
+        </video></button></td>
+    </tr>
+    <tr>
+        <td><button class="episode-button"><h2>Épisode 774</h2><video src="774.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 775</h2><video src="775.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 776</h2><video src="776.mp4" controls width="300">
+        </video></button></td>            
+        <td><button class="episode-button"><h2>Épisode 777</h2><video src="777.mp4" controls width="300">                
+        </video></button></td>
+    </tr>
+    <tr>
+        <td><button class="episode-button"><h2>Épisode 778</h2><video src="778.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 779</h2><video src="779.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 780</h2><video src="780.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 781</h2><video src="781.mp4" controls width="300">
+        </video></button></td>
+    </tr>
+    <tr>
+
+    </tr>
+    <tr>
+        <td><button class="episode-button"><h2>Épisode 782</h2><video src="782.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 783</h2><video src="783.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 784</h2><video src="784.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 785</h2><video src="785.mp4" controls width="300">
+        </video></button></td>
+    </tr>
+    <tr>
+        <td><button class="episode-button"><h2>Épisode 786</h2><video src="786.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 787</h2><video src="787.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 788</h2><video src="788.mp4" controls width="300">
+        </video></button></td>
+        <td><button class="episode-button"><h2>Épisode 789</h2><video src="789.mp4" controls width="300">
+        </video></button></td>
+    </tr>
+    <tr>
+        <td><button class="episode-button"><h2>Épisode 790</h2><video src="790.mp4" controls width="300">
+        </video></button></td>
+    </tr>
+</table>
+<font color="white"><h2>Fin de la saison 9</h2></font>
+
+
+
+
+
+
+<script>
+    
+// Sélectionne le bouton et le conteneur des épisodes
+const Episodes = document.getElementById('Episodes');
+const episodesContainer = document.getElementById('episodesContainer');
+const tables = episodesContainer.querySelectorAll('table');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let currentTableIndex = 0; // Index du groupe d'épisodes actuellement affiché
+
+// Affiche ou masque les épisodes
+Episodes.addEventListener('click', () => {
+    if (episodesContainer.style.display === 'none' || episodesContainer.style.display === '') {
+        episodesContainer.style.display = 'block'; // Affiche les épisodes
+        Episodes.textContent = 'Masquer les épisodes';
+    } else {
+        episodesContainer.style.display = 'none'; // Masque les épisodes
+        Episodes.textContent = 'Afficher les épisodes';
+    }
+});
+// Fonction pour mettre à jour l'affichage des groupes d'épisodes
+function updateTableDisplay() {
+    tables.forEach((table, index) => {
+        table.classList.toggle('active', index === currentTableIndex);
+    });
+}
+
+// Gestion du bouton "Suivant"
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        if (currentTableIndex < tables.length - 1) {
+            currentTableIndex++;
+            updateTableDisplay();
+        }
+    });
+}
+// Gestion du bouton "Précédent"
+if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+        if (currentTableIndex > 0) {
+            currentTableIndex--;
+            updateTableDisplay();
+        }
+    });
+}
+
+// Initialisation de l'affichage
+updateTableDisplay();
+</script>
+</font>
+</body>
+</html>

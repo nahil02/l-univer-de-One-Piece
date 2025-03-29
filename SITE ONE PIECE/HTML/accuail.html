@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> l'univer-de-One Piece </title>
+    <link rel="stylesheet" href="accuail.css" type="text/css">
+</head>
+<body  dir="auto">
+<font color="black">
+<nav>
+    <table>
+        <tr>
+            <td><img src="OIP.JFIF" width="30%" height="70%" sizes="40%"></td>
+            <td><a href="accuail.html">Accuail</a></td>
+            <td><a href="saison.html">Saison</a></td>
+            <td><a href="film.html">Film</a></td>
+            <td><a href="l'histoire.html">L'histoire</a></td>
+            <td><a href="image.html">Image</a></td>
+        </tr>
+    </table>
+</nav>
+<h1><font color="green">* La présentation des personnage</font></h1>
+<font color="white">
+<ol type="1">
+<B><font color="green"><h1>* Les chapeux de paille</h1></font></B>
+    <li><B>Monky.D Luffy (le future roi des pirate)</B></li>
+    <li><B>Roronoa Zoro (le sabreure l'egendaire)</B></li>
+    <li><B>Nami (la navigatrice)</B></li>
+    <li><B>Usopp (le tireure des lite)</B></li>
+    <li><B>Vincemok Sanji (le cuisto)</B></li>
+    <li><B>Nivertary Vivi ()</B></li>
+    <li><B>Tony Tony Chopper (le médécine)</B></li>
+    <li><B>Nico Robin (l'arciologue)</B></li>
+    <li><B>Franky (le syborg-reparateur et protecteur du bateux)</B></li>
+    <li><B>Brook (le musicien de bird)</B></li>
+    <li><B>Jimbe ()</B></li>
+    <li><B>Carrot ()</B></li>
+    <li><B>Yamato ()</B></li>
+    <li><B>Bunny ()</B></li>
+</ol>
+<ol type="1">
+<B><font color="green"><h1>* La marine</h1></font></B>
+   <li><B>Garp (le hero de la marine)</B></li>
+   <li><B>Koby ()</B></li>
+   <li><B>Sen goko (chef)</B></li>
+   <li>Ermet ()</li>
+   <ol type="a"><B><font color="green"><h1>* les amiral</h1></font></B>
+      <li>Akaino</li>
+      <li>Aokiji (X) à quite la marine</li>
+      <li>Fujitora</li>
+      <li>Kizaru</li>
+   </ol>
+</ol>
+<ol type="1">
+<B><font color="green"><h1>* Les sept (7) grand corsaire</h1></font></B>
+   <li><B>Crocodaile (le pouvouir de contriler le sable)</B></li>
+   <li><B>Mihawk (l'epieste de la brume)</B></li>
+   <li><B>Boa hancoc (l'inpiratrice et chef de l'ile des femmes et les pirate cuja)</B></li>
+   <li><B>Geko moria (le pouvouir des aumbre)</B></li>
+   <li><B>Donflamingo (un dragon sileste)</B></li>
+   <li><B>Kuma (un amis de dragon)</B></li>
+   <li><B></B></li>
+</ol>
+<ol type="1">
+<B><font color="green"><h1>* Les qautre (4) empreure des mer</h1></font></B>
+   <li><B>Kaido (X) battu</B></li>
+   <li><B>Big Mom (X) battu</B></li>
+   <li><B>Barbe blanche (X) battu</B></li>
+   <li><B>shanks le reux</B></li>
+   <li><B>Barbe noir</B></li>
+   <li><B>Bagi le clone</B></li>
+   <li><B>Monky.D luffy</B></li>
+</ol>
+<ol type="1">
+<B><font color="green"><h1>* L'armèe rèvolutionère</h1></font></B>
+    <li>Monky.D Dragon</li>
+    <li>Sabo</li>
+    <li>Inazuma</li>
+    <li>Kuma</li>
+    <li>Ivakove</li>
+    <li>Koila</li>
+</ol>
+
+
+<script>
+    // Sélectionne les éléments nécessaires
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+const filmList = document.getElementById('Filmliste');
+const films = filmList.getElementsByTagName('li');
+
+// Ajoute un événement au bouton de recherche
+searchButton.addEventListener('click', () => {
+    const query = searchInput.value.toLowerCase(); // Récupère la valeur de recherche en minuscules
+
+    // Parcourt tous les films et affiche/masque en fonction de la recherche
+    for (let film of films) {
+        const filmTitle = film.textContent.toLowerCase(); // Titre du film en minuscules
+        if (filmTitle.includes(query)) {
+            film.style.display = ''; // Affiche le film
+        } else {
+            film.style.display = 'none'; // Masque le film
+        }
+    }
+});
+</script>
+</font>
+</body>
+</html>
